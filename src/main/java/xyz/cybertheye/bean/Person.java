@@ -1,7 +1,7 @@
 package xyz.cybertheye.bean;
 
 /**
- * @description:
+ * @description: 模拟表结构
  */
 public class Person extends Item implements Cloneable{
     private static int count = 1;

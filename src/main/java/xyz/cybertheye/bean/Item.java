@@ -1,7 +1,7 @@
 package xyz.cybertheye.bean;
 
 /**
- * @description:
+ * @description: 模拟表字段的公共/隐藏字段
  */
 public abstract class Item implements Cloneable{
     protected final int id = getCount() ;

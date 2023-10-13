@@ -11,7 +11,7 @@ import java.util.*;
 import java.util.concurrent.locks.Lock;
 
 /**
- * @description:
+ * @description: 模拟数据库引擎
  */
 public class Engine {
 //    private Map<Class<?>,Undolog> undologMap;
@@ -35,7 +35,6 @@ public class Engine {
     private ThreadLocal<Integer> trxState = ThreadLocal.withInitial(()-> TX_NOT_TURN_ON);
     private ThreadLocal<Integer> trxId = new ThreadLocal<>();
     private ThreadLocal<List<Lock>> locks = ThreadLocal.withInitial(()->new ArrayList<>());
-
     private ThreadLocal<Set<Integer>> updateIds = ThreadLocal.withInitial(()->new HashSet<>());
 
 
