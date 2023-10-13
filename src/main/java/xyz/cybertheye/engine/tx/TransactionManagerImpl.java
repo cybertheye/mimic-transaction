@@ -32,7 +32,9 @@ public class TransactionManagerImpl implements TransactionManager{
 
     @Override
     public int getNextTrxId() {
+        //第一把锁是和生成readview的线程竞争
         synchronized (this) {
+            //第二把锁是和其他修改这个值的线程竞争
             synchronized (lock) {
                 return maxTrxId++;
             }
